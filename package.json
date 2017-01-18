@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "xero-client",
+        "scope": null,
+        "escapedName": "xero-client",
+        "name": "xero-client",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/trusu/Documents/trusu/engineering/trusu"
+    ]
+  ],
+  "_from": "xero-client@latest",
+  "_id": "xero-client@0.1.1",
+  "_inCache": true,
+  "_location": "/xero-client",
+  "_nodeVersion": "4.3.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/xero-client-0.1.1.tgz_1463305338650_0.2297245361842215"
+  },
+  "_npmUser": {
+    "name": "romanmandryk",
+    "email": "roman.mandryk@gmail.com"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "xero-client",
+    "scope": null,
+    "escapedName": "xero-client",
+    "name": "xero-client",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/xero-client/-/xero-client-0.1.1.tgz",
+  "_shasum": "398a3991cc3b5d0a2e94831896d7596194202c39",
+  "_shrinkwrap": null,
+  "_spec": "xero-client",
+  "_where": "/Users/trusu/Documents/trusu/engineering/trusu",
+  "author": {
+    "name": "Roman Mandryk"
+  },
+  "bugs": {
+    "url": "https://github.com/node-vision/xero-client/issues"
+  },
+  "dependencies": {
+    "easyxml": "^2.0.1",
+    "express-session": "^1.13.0",
+    "inflect": "^0.3.0",
+    "oauth": "^0.9.14"
+  },
+  "description": "Node.Js integration client for Xero accounting software",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "398a3991cc3b5d0a2e94831896d7596194202c39",
+    "tarball": "https://registry.npmjs.org/xero-client/-/xero-client-0.1.1.tgz"
+  },
+  "gitHead": "3b1bc5b1f430be3aa0d7d6452f9f53942050ac92",
+  "homepage": "https://github.com/node-vision/xero-client#readme",
+  "keywords": [
+    "xero",
+    "accounting",
+    "node",
+    "integration",
+    "public",
+    "client"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "romanmandryk",
+      "email": "roman.mandryk@gmail.com"
+    }
+  ],
+  "name": "xero-client",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-vision/xero-client.git"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "version": "0.1.1"
+}
