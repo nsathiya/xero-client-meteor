@@ -33,6 +33,7 @@ var oauth = {};
 
 exports.setConfig = function(cfg){
   config = cfg;
+  console.log('config', config)
   oauth = new OAuth.OAuth(
     REQUEST_URL,
     ACCESS_URL,
@@ -57,9 +58,11 @@ exports.setConfig = function(cfg){
  */
 exports.requestXeroRequestToken = function (req, res) {
 
+  console.log('Entering getOAuthRequestToken')
+
   oauth.getOAuthRequestToken(function (error, oauth_token, oauth_token_secret, results) {
 
-    console.log('Entering getOAuthRequestToken')
+
 
     if (error) {
       console.log(error);
@@ -81,9 +84,7 @@ exports.requestXeroRequestToken = function (req, res) {
 
     // redirect the user to Xero's authorize url page
     //return res.redirect();
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.writeHead(301, {Location: AUTHORIZE_URL + oauth_token});
+    res.writeHead(307, {Location: AUTHORIZE_URL + oauth_token});
     console.log('About to redirect')
     res.end();
 
@@ -120,6 +121,9 @@ exports.requestXeroAccessToken = function (req, res, callback) {
         console.error(error);
         return res.status(403).send("Authentication Failure!");
       }
+
+      console.log("Oauth_access_token", oauth_access_token)
+      console.log("Oauth_access_token_secret", oauth_access_token_secret)
 
       cookies.set("xeroAuth", JSON.stringify({
         token: oAuthData.token,
@@ -234,6 +238,7 @@ exports.syncInvoices = function (invoices, req, callback) {
  */
 function makeGetRequest(req, url, root, callback) {
 
+  console.log('Entering makeGetRequest...')
   Cookies = require("cookies")
   cookies = new Cookies(req, null)
   oAuthData = cookies.get("xeroAuth")
@@ -284,7 +289,7 @@ function makePostOrPutRequest(req, url, xmlRoot, data, callback, usePUT) {
   if (!data || !data.length) {
     return callback(null, []);
   }
-  
+
   Cookies = require("cookies")
   cookies = new Cookies(req, null)
   oAuthData = cookies.get("xeroAuth")
